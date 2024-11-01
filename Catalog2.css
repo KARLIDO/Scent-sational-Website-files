@@ -1,0 +1,153 @@
+/* Global Styles */
+body, html {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    color: #333;
+    background-image: url('Images/wallpaper.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+}
+
+/* Header Styles */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff6b6b;
+}
+
+.signout-button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signout-button:hover {
+    background-color: #ff4757;
+}
+
+/* Main Content Styles */
+main {
+    padding-top: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2d3436;
+    margin-bottom: 2rem;
+}
+
+.items2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.fore {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fore:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.fore img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.fore h3 {
+    font-size: 1.2rem;
+    margin: 1rem;
+    color: #2d3436;
+}
+
+.fore p {
+    font-size: 1rem;
+    margin: 0 1rem 1rem;
+    color: #636e72;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0.1rem 0;
+    }
+
+    .items2 {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    main {
+        padding-top: 40px;
+    }
+    search-bar form{
+        margin-top:20px;
+     } /* Add some space above */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fore {
+    animation: fadeIn 0.5s ease-in-out;
+}

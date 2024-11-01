@@ -1,0 +1,120 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #2c3e50;
+    padding: 20px 0;
+}
+
+header img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Form container */
+form {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+table td {
+    padding: 15px 10px;
+}
+
+/* Form inputs */
+input[type="number"],
+input[type="text"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Required fields */
+.required, span[style="color:red;"] {
+    color: #e74c3c;
+}
+
+/* Section headings */
+span[style="font-weight: bold;"] {
+    font-size: 20px;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+/* Pay Now button */
+input[type="image"] {
+    display: block;
+    margin: 20px auto 0;
+    transition: opacity 0.3s ease;
+}
+
+input[type="image"]:hover {
+    opacity: 0.9;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    form {
+        padding: 20px;
+    }
+    
+    table td {
+        display: block;
+        padding: 10px 0;
+    }
+    
+    input[type="number"],
+    input[type="text"],
+    select {
+        font-size: 14px;
+    }
+}

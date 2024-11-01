@@ -1,0 +1,229 @@
+/* Global Styles */
+body, html {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    color: #333;
+    background-image: url('Images/wallpaper.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+}
+
+
+/* Item Details Container */
+.item-details {
+    max-width: 1000px;
+    margin: 120px auto 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Item Image */
+.item-details img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+    flex: 1;
+    min-width: 800px;
+}
+
+/* Item Info Container */
+.item-info {
+    flex: 1;
+    padding: 30px;
+    min-width: 800px;
+}
+
+/* Item Name */
+.item-details h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* Item Price */
+.item-details p strong {
+    font-size: 24px;
+    color: #e74c3c;
+}
+
+/* Item Description */
+.item-details p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #7f8c8d;
+}
+
+/* Add to Cart Button */
+.signout-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signout-button:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .item-details {
+        flex-direction: column;
+    }
+    
+    .item-details img {
+        border-radius: 10px 10px 0 0;
+    }
+}
+header img {
+    max-width: 500px;
+    max-height: 100px;
+    margin-top: -10px; /* Adjust this value as needed */
+}
+        nav>ul>li {
+    display: inline-block;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  
+    background-color: white;
+    overflow: auto;
+    padding: 10px 30px 20px 10px;
+  }
+  
+  .primary-nav {
+    float: left;
+    font-size: 20px;
+  }
+  
+  .primary-nav>a {
+    letter-spacing: 5px;
+  }
+  
+  .primary-nav>img {
+    width: 30px;
+  }
+  
+  .secondary-nav>a {
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 15px;
+    letter-spacing: 3px;
+    padding-right: 20px;
+  }
+  
+  .secondary-nav {
+    float: right;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  
+  nav>ul>li>a {
+    color: black;
+    font-family: helvetica;
+    text-decoration: none;
+  }
+  
+  nav>ul>li>a:hover {
+    color: #cb4335;
+    transition: .7s ease;
+  }
+  body {
+  height: 100%;
+  margin: 0;
+  font-family: "Montserrat";
+  max-width: 100%;
+  overflow-x: hidden;
+  background-image: url('Images/wallpaper.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+}
+/* General CSS */
+header {
+    width: 100%;
+    background-color: white;
+    z-index: 1000; /* Ensures the header stays on top of the content */
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for a clean look */
+}
+
+header img {
+    max-width: 500px;
+    max-height: 100px;
+    margin-top: -10px;
+}
+
+nav>ul>li {
+    display: inline-block;
+}
+
+/* Responsive Design for Screens with max-width of 600px */
+@media (max-width: 600px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: white;
+        height: auto; /* Adjust header height for small screens */
+    }
+
+    header img {
+        max-width: 300px; /* Adjust logo size */
+        max-height: 80px;
+        margin-top: -5px;
+    }
+
+    /* Push down content to avoid overlapping */
+    body {
+        padding-top: -80px; /* Adjust the value to match the header height */
+    }
+    
+    .primary-nav, .secondary-nav {
+        display: block;
+        text-align: center; /* Center the navigation for small screens */
+    }
+
+    nav>ul>li {
+        display: block; /* Stack nav items vertically */
+        margin: 10px 0; /* Add spacing between items */
+    }
+
+    /* Adjust the appearance of the secondary navigation */
+    .secondary-nav>a {
+        font-size: 18px;
+        padding: 5px;
+    }
+}
+/* Cart Icon */
+.fa-shopping-cart {
+    margin-right: 5px;
+}
+
+/* User Icon */
+.fa-user-circle {
+    margin-right: 5px;
+    color: #3498db;
+}

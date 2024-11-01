@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --hover-color: #e74c3c;
+  --text-color: #333;
+  --bg-color: #ffffff;
+  --transition: all 0.3s ease;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--bg-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 30px;
+  box-sizing: border-box;
+}
+
+nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav > ul > li {
+  display: inline-block;
+}
+
+.primary-nav {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.primary-nav > a {
+  letter-spacing: 5px;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.primary-nav > a:hover {
+  color: var(--secondary-color);
+}
+
+.primary-nav > img {
+  width: 40px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.secondary-nav {
+  display: flex;
+  align-items: center;
+}
+
+.secondary-nav > a {
+  color: var(--text-color);
+  font-size: 16px;
+  letter-spacing: 2px;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: var(--transition);
+  font-weight: 400;
+  position: relative;
+}
+
+.secondary-nav > a:hover {
+  color: var(--hover-color);
+}
+
+.secondary-nav > a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--hover-color);
+  transition: var(--transition);
+}
+
+.secondary-nav > a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+nav > ul > li > a {
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+nav > ul > li > a:hover {
+  color: var(--hover-color);
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 10px 15px;
+  }
+
+  .primary-nav {
+    font-size: 20px;
+  }
+
+  .secondary-nav > a {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .primary-nav > img {
+    width: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav > ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .secondary-nav {
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .secondary-nav > a {
+    padding: 5px 10px;
+  }
+}

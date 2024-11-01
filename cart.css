@@ -1,0 +1,202 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    
+    padding-top: 80px;
+    background-image: url('Images/wallpaper.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff6b6b;
+}
+
+.signout-button {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signout-button:hover {
+    background-color: #ff4757;
+}
+
+/* Cart Table Styles */
+h1 {
+    text-align: center;
+    margin: 40px 0;
+    color: #2d3436;
+    font-size: 2.5em;
+}
+
+table {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    color: #2d3436;
+}
+
+td img {
+    max-width: 80px;
+    max-height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Form and Button Styles */
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button[name="delete"] {
+    background-color: #ff6b6b;
+}
+
+button[name="delete"]:hover {
+    background-color: #ff4757;
+}
+
+/* Total Price and Pay Now Button */
+p {
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 20px 5%;
+}
+
+form[action="checkout.php"] {
+    text-align: right;
+    margin: 20px 5%;
+}
+
+button[name="pay_now"] {
+    background-color: #3498db;
+    font-size: 1.1em;
+    padding: 10px 20px;
+}
+
+button[name="pay_now"]:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    td img {
+        max-width: 60px;
+        max-height: 60px;
+    }
+
+    input[type="number"] {
+        width: 40px;
+    }
+
+    button {
+        padding: 6px 10px;
+        font-size: 0.9em;
+    }
+}
